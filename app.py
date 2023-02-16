@@ -51,5 +51,6 @@ class Kettle:
 
 
 load_dotenv() # загружаем конфигуративный файл
-vertek = Kettle(int(os.getenv('AMOUNT_OF_WATER')))  # создаем класс vertek
+amount_of_water = float(input(f'Залить чайник водой от 0 до {int(os.getenv("AMOUNT_OF_WATER"))}\n'))
+vertek = Kettle(amount_of_water)  # создаем класс vertek
 vertek.working(int(os.getenv('TIME_WORKING')), int(os.getenv('TEMP_OFF'))) # вызываем функцию включить кнопку с параметрами время работы чайника и до какой температуры греть
